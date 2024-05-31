@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .jumbotron {
+        background-color: #f8f9fa; /* Light gray background */
+        padding: 2rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+        .jumbotron h1 {
+            color: #343a40; /* Dark gray text */
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            color: #6c757d; /* Gray text */
+        }
+
+    .btn-primary,
+    .btn-secondary {
+        background-color: #007bff; /* Primary and secondary button color */
+        border-color: #007bff; /* Button border color */
+    }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            background-color: #0056b3; /* Darker color on hover */
+            border-color: #0056b3; /* Darker border color on hover */
+        }
+
+    .col-md-4 {
+        transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+    }
+
+        .col-md-4:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+    .section-header {
+        color: #343a40; /* Dark gray text for section headers */
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-content {
+        color: #6c757d; /* Gray text for section content */
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Agri-Energy Connect</h1>
+        <p class="lead">Connect with farmers and explore agricultural products.</p>
+        <hr class="my-4">
+        <p>Discover a wide range of farm-fresh products and support local farmers.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="section-header">Farmers</h2>
+            <p class="section-content">Explore our network of dedicated farmers and learn about their farms.</p>
+            <p><a class="btn btn-secondary" asp-controller="Farmers" asp-action="Index">View Farmers &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="section-header">Products</h2>
+            <p class="section-content">Discover a wide variety of agricultural products available from our farmers.</p>
+            <p><a class="btn btn-secondary" asp-controller="Products" asp-action="Index">View Products &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="section-header">About Us</h2>
+            <p class="section-content">Learn more about Agri-Energy Connect and our mission to support local agriculture.</p>
+            <p><a class="btn btn-secondary" href="#">Learn More &raquo;</a></p>
+        </div>
+    </div>
+
+    <!-- Additional sections -->
+    <hr class="my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="section-header">Our Mission</h2>
+            <p class="section-content">We are committed to revolutionizing the agricultural industry by connecting farmers with consumers in a sustainable and transparent manner.</p>
+        </div>
+        <div class="col-md-6">
+            <h2 class="section-header">Why Choose Us</h2>
+            <p class="section-content">Explore the reasons why Agri-Energy Connect is the best choice for farmers and consumers alike.</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Additional scripts -->
+}

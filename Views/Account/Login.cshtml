@@ -1,0 +1,46 @@
+﻿@model AgriEnergyConnect.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-gradient-primary text-white text-center">
+                    <h3 class="font-weight-light my-2">@ViewData["Title"]</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Login">
+                        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" class="form-control" id="inputEmail" placeholder="name@example.com" />
+                            <label for="inputEmail" class="form-label">@Html.DisplayNameFor(m => m.Email)</label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Password" type="password" class="form-control" id="inputPassword" placeholder="Password" />
+                            <label for="inputPassword" class="form-label">@Html.DisplayNameFor(m => m.Password)</label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input asp-for="RememberMe" class="form-check-input" id="inputRememberMe" />
+                            <label asp-for="RememberMe" class="form-check-label">@Html.DisplayNameFor(m => m.RememberMe)</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <div class="small"><a href="#">Forgot your password?</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
